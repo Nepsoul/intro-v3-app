@@ -1,7 +1,7 @@
 /*Dyanmic routing, [id] makes dynamic route*/
-
-const DocsIdPage = () => {
-  return <div>Docs Id Page</div>;
+//implementing the params make the route name dynamic
+const DocsIdPage = ({ params }) => {
+  return <div>id {params.id}</div>;
 };
 
 export default DocsIdPage;
