@@ -3,7 +3,8 @@
    - after [[...id]], it makes docs inclusive which include docs(e.g.localhost:3001/docs, shows this page)
 */
 
-const DocPage = () => {
-  return <div>docs</div>;
+const DocPage = ({ params }) => {
+  console.log(params);
+  return <div>docs{params.id}</div>;
 };
 export default DocPage;
