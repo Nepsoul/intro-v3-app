@@ -2,6 +2,7 @@
 layout does not re-render so, it stays like same which benefit for UI
 we can define nested layout as well for variation of layout in different component
 */
+import Link from "next/link";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -19,11 +20,31 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const links = [
+    {
+      href: "/",
+      label: "Home",
+    },
+    { href: "/docs", label: "Docs" },
+    { href: "/todos", label: "App" },
+  ];
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h2>layout</h2>
-        <div> {children}</div>
+        {/* <h2>layout</h2> */}
+        {/* <div> {children}</div> */}
+        <header>
+          <nav>
+            <ul className="flex item-center">
+              {links.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+        {children}
       </body>
     </html>
   );
