@@ -1,3 +1,5 @@
+import NewTodoForm from "@/components/NewTodoForm";
+
 const getData = async () => {
   await new Promise((res) => setTimeout(() => res(), 2000));
   return { data: [1, 2, 3, 4] };
@@ -12,6 +14,7 @@ const Home = async () => {
   return (
     <div>
       <h1>Home</h1>
+      <NewTodoForm />
     </div>
   );
 };
