@@ -11,7 +11,7 @@ const NewTodoForm = () => {
      - because by default next js run everything on server. 
      - code are not executed in server, it's just render in the server
     */
-  console.log(window.localStorage); //this will show error in server because its browser's method
+  // console.log(window.localStorage); //this will show error in server because its browser's method
   const [state, updateState] = useState("");
   return (
     <div>
