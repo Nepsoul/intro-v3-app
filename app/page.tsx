@@ -6,7 +6,7 @@
 // };
 
 // export default async function Home() {
-const Home = async () => {
+const Home = () => {
   // const data = await getData();
   //this console print in the terminal, that's how known its server component
   // console.log(data, "response from getData");
